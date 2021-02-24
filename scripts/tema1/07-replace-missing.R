@@ -1,4 +1,5 @@
 data <- read.csv("../data/tema1/missing-data.csv", na.strings = "")
+#para completar valores faltantes con la media
 data$Income.mean <- ifelse(is.na(data$Income), 
                            mean(data$Income, na.rm = TRUE),
                            data$Income
